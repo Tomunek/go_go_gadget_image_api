@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  imageapi:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: imageapi
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./img:/app/img"
